@@ -1,0 +1,1 @@
+-force-include-file "Frequency.c";"d:\APD-Proiect\Frequency.c" -force-include-file "Wave.c";"d:\APD-Proiect\Wave.c" 

@@ -1,0 +1,49 @@
+CCFLAGS = -g ;
+HDRS = 	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\activex\\word"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\activex\\excel"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\custctrl"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\custctrl\\custsupp"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\cvirtsup"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\datasock"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\daqUtil"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\printing"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\toolbox"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\reportgen"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\localui"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\instr"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl\\custsupp"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\instr"
+	"C:\\ProgramData\\National Instruments\\CVI2017\\instr"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\include"
+	"C:\\ProgramData\\National Instruments\\CVI2017\\include"
+	"C:\\ProgramData\\National Instruments\\CVI\\include"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\include\\ansi"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\include\\clang\\3.3"
+	"C:\\Program Files (x86)\\IVI Foundation\\IVI\\Include"
+	"C:\\Program Files (x86)\\IVI Foundation\\VISA\\winnt\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\MSDTRedistributables\\SDKHeaderFiles\\8.1"
+	"c:\\Program Files (x86)\\National Instruments\\CVI2017\\bin"
+	"c:\\ProgramData\\National Instruments\\CVI2017\\bin"
+	"c:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
+	;
+include Jamfile_instr ;
+LOCATE on "Frequency.c" = "d:\\facultate anul 3\\APD-Proiect" ;
+LOCATE on "Wave.c" = "d:\\facultate anul 3\\APD-Proiect" ;
+Object "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\Frequency.obj" : "d:\\facultate anul 3\\APD-Proiect\\Frequency.c" ;
+FILENUM on "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\Frequency.obj" = 1 ;
+DEFPROTS on "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\Frequency.obj" = "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\Frequency.obj.cvidefprots" ;
+OUTFILE on "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\Frequency.obj" = "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\Frequency.obj.out" ;
+PrjObjects += "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\Frequency.obj" ;
+Object "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\Wave.obj" : "d:\\facultate anul 3\\APD-Proiect\\Wave.c" ;
+FILENUM on "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\Wave.obj" = 2 ;
+DEFPROTS on "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\Wave.obj" = "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\Wave.obj.cvidefprots" ;
+OUTFILE on "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\Wave.obj" = "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\Wave.obj.out" ;
+PrjObjects += "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\Wave.obj" ;
+Object "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\resources.res" : "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\resources.in.rc" ;
+Depends "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\resources.res" : "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\manifest.xml" ;
+MainFromObjects "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\Wave.exe" : $(PrjObjects) $(InstrObjects) ;
+Depends "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\Wave.exe" : "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\link_options.txt" ;
+Depends "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\Wave.exe" : "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\resources.res" ;
+Depends all : "d:\\facultate anul 3\\APD-Proiect\\cvibuild.Wave\\Debug\\Wave.exe" ;
